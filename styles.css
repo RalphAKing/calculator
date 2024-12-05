@@ -1,76 +1,81 @@
+
 body {
     height: 100vh;
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    background-color: #f4f4f9;
+    font-family: Arial, sans-serif;
+    margin: 0;
 }
 
 .calculator {
-    height: 300px;
-    width: 250px;
-    padding: 30px;
+    width: 300px;
+    padding: 20px;
+    background: #2d2d2d;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    background-color: rgb(222, 222, 222);
 }
-
-
 
 .display {
+    width: 100%;
+    height: 60px;
+    background: #1a1a1a;
+    border-radius: 8px;
+    margin-bottom: 20px;
     display: flex;
-    flex-direction: column;
-    background-color: rgb(193, 191, 191);
-    width: 200px;
-    height: 100px;
     justify-content: flex-end;
-    align-items: end;
-}
-
-p {
-    margin: 2px 5px;
-    font-size: larger;
-}
-
-
-.bottom {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    width: 200px;
-    height: 200px;
-}
-
-.number {
     padding: 10px;
-    margin: 5px;
+    color: #fff;
+    font-size: 1.5rem;
+    overflow: hidden;
+    box-sizing: border-box;
 }
 
-.functions {
-    display: flex;
-    flex-direction: column;
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    width: 100%;
 }
 
-div button {
-    margin: 5px;
-    padding: 5px;
+button {
+    background: #3c3c3c;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
 }
 
+button:hover {
+    background: #4e4e4e;
+}
+
+button:active {
+    background: #616161;
+}
+
+.reset, .clear {
+    background: #d9534f;
+}
+
+.reset:hover, .clear:hover {
+    background: #c9302c;
+}
 
 .enter {
-    padding: 10px 24px;
-    margin: 5px;
+    grid-column: span 2;
+    background: #5cb85c;
 }
 
-
-img {
-    width: 250px;
-    height: 100px;
-    align-self: center;
+.enter:hover {
+    background: #4cae4c;
 }
-
-
